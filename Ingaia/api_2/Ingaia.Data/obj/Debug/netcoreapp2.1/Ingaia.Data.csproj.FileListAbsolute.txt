@@ -1,0 +1,9 @@
+D:\Projetos\Ingaia\Ingaia\api_2\Ingaia.Data\bin\Debug\netcoreapp2.1\Ingaia.Data.deps.json
+D:\Projetos\Ingaia\Ingaia\api_2\Ingaia.Data\bin\Debug\netcoreapp2.1\Ingaia.Data.dll
+D:\Projetos\Ingaia\Ingaia\api_2\Ingaia.Data\bin\Debug\netcoreapp2.1\Ingaia.Data.pdb
+D:\Projetos\Ingaia\Ingaia\api_2\Ingaia.Data\obj\Debug\netcoreapp2.1\Ingaia.Data.csprojAssemblyReference.cache
+D:\Projetos\Ingaia\Ingaia\api_2\Ingaia.Data\obj\Debug\netcoreapp2.1\Ingaia.Data.AssemblyInfoInputs.cache
+D:\Projetos\Ingaia\Ingaia\api_2\Ingaia.Data\obj\Debug\netcoreapp2.1\Ingaia.Data.AssemblyInfo.cs
+D:\Projetos\Ingaia\Ingaia\api_2\Ingaia.Data\obj\Debug\netcoreapp2.1\Ingaia.Data.csproj.CoreCompileInputs.cache
+D:\Projetos\Ingaia\Ingaia\api_2\Ingaia.Data\obj\Debug\netcoreapp2.1\Ingaia.Data.dll
+D:\Projetos\Ingaia\Ingaia\api_2\Ingaia.Data\obj\Debug\netcoreapp2.1\Ingaia.Data.pdb
