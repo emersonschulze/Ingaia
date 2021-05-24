@@ -16,6 +16,8 @@ using TesteIngaia.Data;
 using TesteIngaia.Config;
 using TesteIngaia.Repository;
 using TesteIngaia.Repository.Interface;
+using System.Reflection;
+using System.IO;
 
 namespace TesteIngaia
 {
@@ -33,8 +35,8 @@ namespace TesteIngaia
             var config = new ServerConfig();
             Configuration.Bind(config);
 
-            var todoContext = new BancoContext(config.MongoDB);
-            var repo = new ValorUnidadeMedidaRepository(todoContext);
+            var bancoContext = new BancoContext(config.MongoDB);
+            var repo = new ValorUnidadeMedidaRepository(bancoContext);
 
             services.AddSingleton<IValorUnidadeMedidaRepository>(repo);
 
@@ -46,12 +48,13 @@ namespace TesteIngaia
                 {
                     Title = "INGAIA API",
                     Version = "v1",
-                    Description = "API retorno do valor das unidades de medidas API_1 ",
+                    Description = "API_1 retorno do valor das unidades de medidas",
                 });
+                //  var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                //  var xmlPath = Path.Combine(BancoContext.BaseDirectory, xmlFile);
+                //  c.IncludeXmlComments(xmlPath);
             });
         }
-
-
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {

@@ -8,21 +8,16 @@ namespace TesteIngaia.Repository.Interface
 {
     public interface IValorUnidadeMedidaRepository
     {
-        // api/[GET]
-        Task<IEnumerable<ValorUnidadeMedida>> GetAllTodos();
+        Task<IEnumerable<ValorUnidadeMedida>> BuscarTodos();
 
-        // api/1/[GET]
-        Task<ValorUnidadeMedida> GetTodo(long id);
+        Task<ValorUnidadeMedida> BuscarId(long id);
 
-        // api/[POST]
-        Task Create(ValorUnidadeMedida todo);
+        Task Inserir(ValorUnidadeMedida obj);
 
-        // api/[PUT]
-        Task<bool> Update(ValorUnidadeMedida todo);
+        Task<bool> Atualizar(ValorUnidadeMedida obj);
 
-        // api/1/[DELETE]
-        Task<bool> Delete(long id);
+        Task<bool> Deletar(long id);
 
-        Task<long> GetNextId();
+        Task<long> IncrementarId();
     }
 }

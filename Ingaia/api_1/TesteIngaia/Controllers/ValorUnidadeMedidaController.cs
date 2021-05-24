@@ -23,17 +23,41 @@ namespace TesteIngaia.Controllers
            
         }
 
+        /// <summary>
+        /// Lista todas as unidade de medidas e os valores.
+        /// </summary>
+        /// <returns>Valor Unidades de medidas</returns>
+        /// <response code="200">Retorna as unidades de medidas e os valores correspondentes cadastradas</response>
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ValorUnidadeMedida>>> Get()
+        public async Task<ActionResult<IEnumerable<ValorUnidadeMedida>>> ListarRegistros()
         {
-            return new ObjectResult(await _repo.GetAllTodos());
+            return new ObjectResult(await _repo.BuscarTodos());
         }
 
-        // GET api/todos/1
+        // GET api/v1/ValorUnidadeMedida/{id}
+        /// <summary>
+        /// Lista uma unidade de medida com seu valor respectivo filtrado por id.
+        /// </summary>
+        /// <remarks>
+        /// Exemplo:
+        ///
+        ///     GET api/v1/ValorUnidadeMedida/{id}
+        ///     {
+        ///        "internalId": "string",
+        ///        "id": int,
+        ///        "unidadeMedida": "string",
+        ///        "valor": double
+        ///     }
+        ///
+        /// </remarks>
+        /// <param name="value"></param>
+        /// <returns>Unidade de medida localizada</returns>
+        /// <response code="200">Retorna o registro encontrado pelo id</response>
+        
         [HttpGet("{id}")]
-        public async Task<ActionResult<ValorUnidadeMedida>> Get(long id)
+        public async Task<ActionResult<ValorUnidadeMedida>> ListarRegistro(long id)
         {
-            var todo = await _repo.GetTodo(id);
+            var todo = await _repo.BuscarId(id);
 
             if (todo == null)
                 return new NotFoundResult();
@@ -41,20 +65,54 @@ namespace TesteIngaia.Controllers
             return new ObjectResult(todo);
         }
 
-        // POST api/todos
+        // POST api/v1/ValorUnidadeMedida
+        /// <summary>
+        /// Cria uma unidade de medida com seu valor respectivo.
+        /// </summary>
+        /// <remarks>
+        /// Exemplo:
+        ///
+        ///     POST api/v1/ValorUnidadeMedida
+        ///     {
+        ///        "unidadeMedida": "string",
+        ///        "valor": double
+        ///     }
+        ///
+        /// </remarks>
+        /// <param name="value"></param>
+        /// <returns>Nova unidade de medida criado</returns>
+        /// <response code="201">Retorna o novo registro criado</response>
+        /// <response code="400">Se o registro não for criado</response>
         [HttpPost]
-        public async Task<ActionResult<ValorUnidadeMedida>> Post([FromBody] ValorUnidadeMedida todo)
+        public async Task<ActionResult<ValorUnidadeMedida>> Inserir([FromBody] ValorUnidadeMedida todo)
         {
-            todo.Id = await _repo.GetNextId();
-            await _repo.Create(todo);
+            todo.Id = await _repo.IncrementarId();
+            await _repo.Inserir(todo);
             return new OkObjectResult(todo);
         }
 
-        // PUT api/todos/1
+         // PUT api/v1/ValorUnidadeMedida/{id}
+        /// <summary>
+        /// Atualiza uma unidade de medida com seu valor respectivo.
+        /// </summary>
+        /// <remarks>
+        /// Exemplo:
+        ///
+        ///     PUT api/v1/ValorUnidadeMedida/{id}
+        ///     {
+        ///        "unidadeMedida": "string",
+        ///        "valor": double
+        ///     }
+        ///
+        /// </remarks>
+        /// <param name="value"></param>
+        /// <returns>Atualiza unidade de medida</returns>
+        /// <response code="200">Retorna o registro atualizado</response>
+        /// <response code="400">Se o registro não for atualizado</response>
         [HttpPut("{id}")]
-        public async Task<ActionResult<ValorUnidadeMedida>> Put(long id, [FromBody] ValorUnidadeMedida todo)
+        public async Task<ActionResult<ValorUnidadeMedida>> Atualizar(long id, [FromBody] ValorUnidadeMedida todo)
         {
-            var todoFromDb = await _repo.GetTodo(id);
+            var todoFromDb = await _repo.BuscarId(id);
 
             if (todoFromDb == null)
                 return new NotFoundResult();
@@ -62,21 +120,38 @@ namespace TesteIngaia.Controllers
             todo.Id = todoFromDb.Id;
             todo.InternalId = todoFromDb.InternalId;
 
-            await _repo.Update(todo);
+            await _repo.Atualizar(todo);
 
             return new OkObjectResult(todo);
         }
 
-        // DELETE api/todos/1
+          // DELETE api/v1/ValorUnidadeMedida/{id}
+        /// <summary>
+        /// Deleta uma unidade de medida com seu valor respectivo.
+        /// </summary>
+        /// <remarks>
+        /// Exemplo:
+        ///
+        ///     DELETE api/v1/ValorUnidadeMedida/{id}
+        ///     {
+        ///        "unidadeMedida": "string",
+        ///        "valor": double
+        ///     }
+        ///
+        /// </remarks>
+        /// <param name="value"></param>
+        /// <returns>Deleta unidade de medida</returns>
+        /// <response code="201">Retorna sucess </response>
+        /// <response code="400">Erro Se o registro não for deletado</response>
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(long id)
+        public async Task<IActionResult> Deletar(long id)
         {
-            var post = await _repo.GetTodo(id);
+            var post = await _repo.BuscarId(id);
 
             if (post == null)
                 return new NotFoundResult();
 
-            await _repo.Delete(id);
+            await _repo.Deletar(id);
 
             return new OkResult();
         }
