@@ -21,7 +21,11 @@ Links das aplicações no heroku
 - [**API 1 Endpoint unidade medida valor**](https://ingaiaapi1.herokuapp.com/swagger/index.html)
 - [**API 2 Consumo API 1 e Retorno do valor**](https://ingaiaapi2.herokuapp.com/calculoImovel.html)
 
+Devido a alguns assuntos pessoais, estou com o tempo um pouco limitado, acredito que durante nosso bate papo
+tecnico consigo alinhar demais dúvidas.
+De momento não cheguei a fazer um front-end, para não postegar muito a entrega do teste.
 
+Obrigado.
 ## Requisitos
 
 - [**Git**](https://git-scm.com/)
