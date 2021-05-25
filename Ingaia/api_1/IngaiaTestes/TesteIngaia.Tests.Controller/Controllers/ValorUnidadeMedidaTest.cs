@@ -119,7 +119,7 @@ namespace Ingaia.Tests.Controllers
             var repo = new Mock<IValorUnidadeMedidaRepository>();
 
             controller = new ValorUnidadeMedidaController(repo.Object);
-            controller.ModelState.AddModelError("Unidade de medidade obtrigatória", "test");
+            controller.ModelState.AddModelError("Unidade de medidade obtrigatï¿½ria", "test");
 
             var result = await controller.Inserir(item);
 
@@ -206,8 +206,6 @@ namespace Ingaia.Tests.Controllers
 
         }
 
-
-       
         protected IEnumerable<ValorUnidadeMedida> ListaDadosFake()
         {
             List<ValorUnidadeMedida> registros = new List<ValorUnidadeMedida>();
