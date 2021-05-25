@@ -19,11 +19,26 @@ Teste Ingaia para apresentação do calculo do valor do imóvel com base em um v
 Links das aplicações no heroku
 
 - [**API 1 Endpoint unidade medida valor**](https://ingaiaapi1.herokuapp.com/swagger/index.html)
-- [**API 2 Consumo API 1 e Retorno do valor**](https://ingaiaapi2.herokuapp.com/calculoImovel.html)
+- [**API 2 Consumo API 1 e Retorno do valor**](https://ingaiaapi2.herokuapp.com/calculoImovel)
 
-Devido a alguns assuntos pessoais, estou com o tempo um pouco limitado, acredito que durante nosso bate papo
-tecnico consigo alinhar demais dúvidas.
+Devido a alguns assuntos pessoais, estive com o tempo um pouco limitado, acredito que durante o próximo bate papo
+técnico consigo alinhar demais detalhes e capacidade.
 De momento não cheguei a fazer um front-end, para não postegar muito a entrega do teste.
+Portanto fiquei com as 2 API como backends.
+Desolvi 3 API.
+*Na past api_1 fiou uma implementação simples e rápida.
+*Na pasta api_2, é a mesma Api da da api_1, a diferença que estruturei ela usando  Drive Domain Desegn,
+Repository Pattern.
+*Na api_3 desenvolvi em nodejs, como é um api apenas para consumir a primeira api_1 e retornar o valor do calculo,
+ficou uma implementação mais simples.
+
+Para api 1 foi implementado todo o crud rest api.
+Partindo da url https://ingaiaapi1.herokuapp.com conforme mais detalhes no swagger.
+
+Para api 2 foi implementado 1 get que ira listar todas as unidades de medidas cadastradas e seus valores.
+e foi implementando um POST que ao passar no corpo o Json {"area" : 60.23, "unidade" : "Metros"} o mesmo irá 
+retornar o valor do imovés, Ficou necessário os dois parametros  pois na api pode ser cadastrados diversas
+unidades de medidas e seu valor, assim o mesmo calculo pode ser feito várias vezes apenas selecionando a unidade de medida.
 
 Obrigado.
 ## Requisitos
