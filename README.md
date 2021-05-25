@@ -16,6 +16,10 @@
 ## Sobre
 
 Teste Ingaia para apresentação do calculo do valor do imóvel com base em um valor de uma unidade de medida
+Links das aplicações no heroku
+
+- [**API 1 Endpoint unidade medida valor**](https://ingaiaapi1.herokuapp.com/swagger/index.html)
+- [**API 2 Consumo API 1 e Retorno do valor**](https://ingaiaapi2.herokuapp.com/calculoImovel.html)
 
 
 ## Requisitos
@@ -63,6 +67,6 @@ $ Com a conta criada no Heroku e configurado o app e a conexão e permissões:
 
 ## Exemplo
 
-![alt text](examples/swagger.PNG?raw=true "API ENDPOINTS")
-![alt text](examples/consumerl.PNG?raw=true "API CONSUMER REGISTRO")
-![alt text](examples/consumer.PNG?raw=true "API CONSUMER")
+![alt text](exemplo/swagger.PNG?raw=true "API ENDPOINTS")
+![alt text](exemplo/consumerl.PNG?raw=true "API CONSUMER REGISTRO")
+![alt text](exemplo/consumer.PNG?raw=true "API CONSUMER")
