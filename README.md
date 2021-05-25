@@ -63,5 +63,6 @@ $ Com a conta criada no Heroku e configurado o app e a conexão e permissões:
 
 ## Exemplo
 
-![alt text](sancorjira/examples/Registrar.PNG?raw=true "Registrar")
-
+![alt text](examples/swagger.PNG?raw=true "API ENDPOINTS")
+![alt text](examples/consumerl.PNG?raw=true "API CONSUMER REGISTRO")
+![alt text](examples/consumer.PNG?raw=true "API CONSUMER")
