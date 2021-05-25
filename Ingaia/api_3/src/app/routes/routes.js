@@ -4,9 +4,9 @@ var mongoose = require('mongoose');
 
 var controller = require('../controller/UnidadeMedidaController')
 
-router.get('/unidadeMedida', controller.listarUnidadeMedida); 
+router.get('/calculoImovel', controller.listarUnidadeMedida); 
 
-router.post('/unidadeMedida', controller.calcularValorImovel); 
+router.post('/calculoImovel', controller.calcularValorImovel); 
   
 
 module.exports = router;
