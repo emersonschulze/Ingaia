@@ -23,7 +23,6 @@ D:\Projetos\Ingaia\Ingaia\api_1\TesteIngaia\bin\Debug\netcoreapp2.1\TesteIngaia.
 D:\Projetos\Ingaia\Ingaia\api_1\TesteIngaia\bin\Debug\netcoreapp2.1\TesteIngaia.runtimeconfig.dev.json
 D:\Projetos\Ingaia\Ingaia\api_1\TesteIngaia\bin\Debug\netcoreapp2.1\TesteIngaia.dll
 D:\Projetos\Ingaia\Ingaia\api_1\TesteIngaia\bin\Debug\netcoreapp2.1\TesteIngaia.pdb
-D:\Projetos\Ingaia\Ingaia\api_1\TesteIngaia\obj\Debug\netcoreapp2.1\TesteIngaia.csprojAssemblyReference.cache
 D:\Projetos\Ingaia\Ingaia\api_1\TesteIngaia\obj\Debug\netcoreapp2.1\TesteIngaia.AssemblyInfoInputs.cache
 D:\Projetos\Ingaia\Ingaia\api_1\TesteIngaia\obj\Debug\netcoreapp2.1\TesteIngaia.AssemblyInfo.cs
 D:\Projetos\Ingaia\Ingaia\api_1\TesteIngaia\obj\Debug\netcoreapp2.1\TesteIngaia.csproj.CoreCompileInputs.cache
@@ -34,3 +33,4 @@ D:\Projetos\Ingaia\Ingaia\api_1\TesteIngaia\obj\Debug\netcoreapp2.1\TesteIngaia.
 D:\Projetos\Ingaia\Ingaia\api_1\TesteIngaia\obj\Debug\netcoreapp2.1\TesteIngaia.dll
 D:\Projetos\Ingaia\Ingaia\api_1\TesteIngaia\obj\Debug\netcoreapp2.1\TesteIngaia.pdb
 D:\Projetos\Ingaia\Ingaia\api_1\TesteIngaia\obj\Debug\netcoreapp2.1\TesteIngaia.genruntimeconfig.cache
+D:\Projetos\Ingaia\Ingaia\api_1\TesteIngaia\obj\Debug\netcoreapp2.1\TesteIngaia.csprojAssemblyReference.cache

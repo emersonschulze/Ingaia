@@ -4,11 +4,10 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <UserSecretsId>4364c1a1-2812-47e0-a273-e9c29687707d</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <DockerfileContext>..\TesteIngaia</DockerfileContext>
+    <DockerfileContext>..\..</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
@@ -16,6 +15,12 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.13" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ingaia.Data\Ingaia.Data.csproj" />
+    <ProjectReference Include="..\Ingaia.Dominio\Ingaia.Dominio.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,5 @@
+D:\Projetos\Ingaia\Ingaia\api_1\IngaiaTestes\TesteIngaia.Tests.Controller\obj\Debug\net5.0\TesteIngaia.Tests.Controller.csprojAssemblyReference.cache
+D:\Projetos\Ingaia\Ingaia\api_1\IngaiaTestes\TesteIngaia.Tests.Controller\obj\Debug\net5.0\TesteIngaia.Tests.Controller.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\Ingaia\Ingaia\api_1\IngaiaTestes\TesteIngaia.Tests.Controller\obj\Debug\net5.0\TesteIngaia.Tests.Controller.AssemblyInfoInputs.cache
+D:\Projetos\Ingaia\Ingaia\api_1\IngaiaTestes\TesteIngaia.Tests.Controller\obj\Debug\net5.0\TesteIngaia.Tests.Controller.AssemblyInfo.cs
+D:\Projetos\Ingaia\Ingaia\api_1\IngaiaTestes\TesteIngaia.Tests.Controller\obj\Debug\net5.0\TesteIngaia.Tests.Controller.csproj.CoreCompileInputs.cache

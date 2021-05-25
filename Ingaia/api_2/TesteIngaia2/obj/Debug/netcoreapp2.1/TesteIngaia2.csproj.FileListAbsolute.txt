@@ -16,3 +16,8 @@ D:\Projetos\Ingaia\Ingaia\api_2\TesteIngaia2\obj\Debug\netcoreapp2.1\TesteIngaia
 D:\Projetos\Ingaia\Ingaia\api_2\TesteIngaia2\obj\Debug\netcoreapp2.1\TesteIngaia2.dll
 D:\Projetos\Ingaia\Ingaia\api_2\TesteIngaia2\obj\Debug\netcoreapp2.1\TesteIngaia2.pdb
 D:\Projetos\Ingaia\Ingaia\api_2\TesteIngaia2\obj\Debug\netcoreapp2.1\TesteIngaia2.genruntimeconfig.cache
+D:\Projetos\Ingaia\Ingaia\api_2\TesteIngaia2\bin\Debug\netcoreapp2.1\Ingaia.Data.dll
+D:\Projetos\Ingaia\Ingaia\api_2\TesteIngaia2\bin\Debug\netcoreapp2.1\Ingaia.Dominio.dll
+D:\Projetos\Ingaia\Ingaia\api_2\TesteIngaia2\bin\Debug\netcoreapp2.1\Ingaia.Data.pdb
+D:\Projetos\Ingaia\Ingaia\api_2\TesteIngaia2\bin\Debug\netcoreapp2.1\Ingaia.Dominio.pdb
+D:\Projetos\Ingaia\Ingaia\api_2\TesteIngaia2\obj\Debug\netcoreapp2.1\TesteIngaia2.csproj.CopyComplete

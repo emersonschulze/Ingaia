@@ -4,14 +4,14 @@
     "D:\\Projetos\\Ingaia\\Ingaia\\api_2\\TesteIngaia2\\TesteIngaia2.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\Ingaia\\Ingaia\\api_2\\TesteIngaia2\\TesteIngaia2.csproj": {
+    "D:\\Projetos\\Ingaia\\Ingaia\\api_2\\Ingaia.Data\\Ingaia.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\Ingaia\\Ingaia\\api_2\\TesteIngaia2\\TesteIngaia2.csproj",
-        "projectName": "TesteIngaia2",
-        "projectPath": "D:\\Projetos\\Ingaia\\Ingaia\\api_2\\TesteIngaia2\\TesteIngaia2.csproj",
+        "projectUniqueName": "D:\\Projetos\\Ingaia\\Ingaia\\api_2\\Ingaia.Data\\Ingaia.Data.csproj",
+        "projectName": "Ingaia.Data",
+        "projectPath": "D:\\Projetos\\Ingaia\\Ingaia\\api_2\\Ingaia.Data\\Ingaia.Data.csproj",
         "packagesPath": "C:\\Users\\emers\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\Ingaia\\Ingaia\\api_2\\TesteIngaia2\\obj\\",
+        "outputPath": "D:\\Projetos\\Ingaia\\Ingaia\\api_2\\Ingaia.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
@@ -45,6 +45,147 @@
         "netcoreapp2.1": {
           "targetAlias": "netcoreapp2.1",
           "dependencies": {
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.12.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projetos\\Ingaia\\Ingaia\\api_2\\Ingaia.Dominio\\Ingaia.Dominio.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\Ingaia\\Ingaia\\api_2\\Ingaia.Dominio\\Ingaia.Dominio.csproj",
+        "projectName": "Ingaia.Dominio",
+        "projectPath": "D:\\Projetos\\Ingaia\\Ingaia\\api_2\\Ingaia.Dominio\\Ingaia.Dominio.csproj",
+        "packagesPath": "C:\\Users\\emers\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\Ingaia\\Ingaia\\api_2\\Ingaia.Dominio\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\emers\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "MongoDB.Bson": {
+              "target": "Package",
+              "version": "[2.12.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Projetos\\Ingaia\\Ingaia\\api_2\\TesteIngaia2\\TesteIngaia2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Projetos\\Ingaia\\Ingaia\\api_2\\TesteIngaia2\\TesteIngaia2.csproj",
+        "projectName": "TesteIngaia2",
+        "projectPath": "D:\\Projetos\\Ingaia\\Ingaia\\api_2\\TesteIngaia2\\TesteIngaia2.csproj",
+        "packagesPath": "C:\\Users\\emers\\.nuget\\packages\\",
+        "outputPath": "D:\\Projetos\\Ingaia\\Ingaia\\api_2\\TesteIngaia2\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\emers\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "targetAlias": "netcoreapp2.1",
+            "projectReferences": {
+              "D:\\Projetos\\Ingaia\\Ingaia\\api_2\\Ingaia.Data\\Ingaia.Data.csproj": {
+                "projectPath": "D:\\Projetos\\Ingaia\\Ingaia\\api_2\\Ingaia.Data\\Ingaia.Data.csproj"
+              },
+              "D:\\Projetos\\Ingaia\\Ingaia\\api_2\\Ingaia.Dominio\\Ingaia.Dominio.csproj": {
+                "projectPath": "D:\\Projetos\\Ingaia\\Ingaia\\api_2\\Ingaia.Dominio\\Ingaia.Dominio.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
+          "dependencies": {
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
               "target": "Package",
@@ -57,7 +198,6 @@
               "version": "[2.1.2, )"
             },
             "Microsoft.NETCore.App": {
-              "suppressParent": "All",
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
@@ -65,6 +205,10 @@
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.10.13, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[4.0.1, )"
             }
           },
           "imports": [

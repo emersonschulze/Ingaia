@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
+using TesteIngaia.Business;
 
 namespace TesteIngaia.Controllers
 {
@@ -16,11 +17,11 @@ namespace TesteIngaia.Controllers
     public class ValorUnidadeMedidaController : ControllerBase
     {
         private readonly IValorUnidadeMedidaRepository _repo;
-     
+
         public ValorUnidadeMedidaController(IValorUnidadeMedidaRepository repository)
         {
             _repo = repository;
-           
+
         }
 
         /// <summary>
@@ -53,7 +54,7 @@ namespace TesteIngaia.Controllers
         /// <param name="value"></param>
         /// <returns>Unidade de medida localizada</returns>
         /// <response code="200">Retorna o registro encontrado pelo id</response>
-        
+
         [HttpGet("{id}")]
         public async Task<ActionResult<ValorUnidadeMedida>> ListarRegistro(long id)
         {
@@ -84,14 +85,28 @@ namespace TesteIngaia.Controllers
         /// <response code="201">Retorna o novo registro criado</response>
         /// <response code="400">Se o registro não for criado</response>
         [HttpPost]
-        public async Task<ActionResult<ValorUnidadeMedida>> Inserir([FromBody] ValorUnidadeMedida todo)
+        public async Task<ActionResult<ValorUnidadeMedida>> Inserir([FromBody] ValorUnidadeMedida item)
         {
-            todo.Id = await _repo.IncrementarId();
-            await _repo.Inserir(todo);
-            return new OkObjectResult(todo);
+            if (ModelState.IsValid)
+            {
+                var regra = new RegrasBusiness(item);
+
+                if (!regra.regraValorPermitido())
+                {
+                    return BadRequest();
+                }
+
+                item.Id = await _repo.IncrementarId();
+                await _repo.Inserir(item);
+                return new OkObjectResult(item);
+            }
+            else
+            {
+                return BadRequest();
+            }
         }
 
-         // PUT api/v1/ValorUnidadeMedida/{id}
+        // PUT api/v1/ValorUnidadeMedida/{id}
         /// <summary>
         /// Atualiza uma unidade de medida com seu valor respectivo.
         /// </summary>
@@ -110,22 +125,36 @@ namespace TesteIngaia.Controllers
         /// <response code="200">Retorna o registro atualizado</response>
         /// <response code="400">Se o registro não for atualizado</response>
         [HttpPut("{id}")]
-        public async Task<ActionResult<ValorUnidadeMedida>> Atualizar(long id, [FromBody] ValorUnidadeMedida todo)
+        public async Task<ActionResult<ValorUnidadeMedida>> Atualizar(long id, [FromBody] ValorUnidadeMedida item)
         {
-            var todoFromDb = await _repo.BuscarId(id);
+            var regra = new RegrasBusiness(item);
+            var itemFromDb = await _repo.BuscarId(id);
 
-            if (todoFromDb == null)
+            if (itemFromDb == null)
                 return new NotFoundResult();
 
-            todo.Id = todoFromDb.Id;
-            todo.InternalId = todoFromDb.InternalId;
+            item.Id = itemFromDb.Id;
+            item.InternalId = itemFromDb.InternalId;
 
-            await _repo.Atualizar(todo);
+            if (ModelState.IsValid)
+            {
+                if (!regra.regraValorPermitido())
+                {
+                    return BadRequest();
+                }
 
-            return new OkObjectResult(todo);
+                await _repo.Atualizar(item);
+                return new OkObjectResult(item);
+            }
+            else
+            {
+                return BadRequest();
+            }
+
         }
 
-          // DELETE api/v1/ValorUnidadeMedida/{id}
+
+        // DELETE api/v1/ValorUnidadeMedida/{id}
         /// <summary>
         /// Deleta uma unidade de medida com seu valor respectivo.
         /// </summary>
